@@ -1,0 +1,83 @@
+Informacje ogólne:
+
+Cel:
+
+Celem ćwiczeń laboratoryjnych jest napisanie aplikacji typu lista-szczegóły w oparciu o materiały prezentowane na wykładach. Na kolejnych zajęciach aplikacja będzie rozbudowywana o nowe elementy. Realizacja zadania została podzielona na dwa etapy w pierwszym należy przygotować w pełni funkcjonalną aplikację, ale jeszcze bez zastosowania "efektów upiększających" z biblioteki wsparcia, czyli to co jest prezentowane na wykładach 2, 3 i 4. W drugim etapie nadajemy aplikacji współczesny wygląd korzystając z biblioteki wsparcia wzornictwa oraz dodając do aplikacji prostą animację wykonywaną podczas uruchamiania aplikacji (wykłady 5-8).
+
+Zadanie można realizować w zespołach dwuosobowych lub indywidualnie.
+
+Ocenianie:
+
+Poprawne wykonanie aplikacji według wymagań minimalnych gwarantuje ocenę dobrą (4,0) z laboratorium. Na ocenę bardzo dobrą (5,0) należy w wytwarzanej aplikacji uwzględnić kilka z wymagań dodatkowych.
+
+Oddawanie zrealizowanego zadnia:
+
+W trakcie semestru należy zaprezentować postępy z realizacji pierwszego etapu. Termin, w którym należy to zrobić przedstawiony jest w terminarzu zajęć.
+Działanie gotowej aplikacji należy zaprezentować na ostatnich zajęciach lub wcześniej. Ponadto należy przygotować i wgrać:
+sprawozdanie w postaci pliku pdf., które powinno zawierać opis zrealizowanego projektu, czyli informacje na temat tego, w jakie funkcje wyposażono aplikację, jak to zrealizowano; każdą taką informację należy poprzeć odpowiednim fragmentem kodu, a jeżeli efekt jest wizualny, to wkleić odpowiedni obrazek; sprawozdanie ma pokazać, że zrealizowaliście zadanie samodzielnie i orientujecie się w tym, co, jak i po co zostało w niej zaimplementowane; wymaga to nieco więcej wysiłku niż wstawienie zapisu typu "do aplikacji dodaliśmy szufladę nawigacyjną, co ilustruje poniższy fragment kodu"
+film prezentujący aplikację w działaniu, może być na emulatorze lub fizycznym urządzeniu, film powinien pokazać te elementy zadania, które zostały zrealizowane (np. jeżeli zrealizowano kod na tablety, to należy pokazać, ze aplikacja działa na tablecie, jeżeli zaimplementowano obsługę obracania ekranu, to pokazać jak aplikacja reaguje na obrót itd.); pominiecie jakiegoś elementu jest uznawane za równoważne z jego niezrealizowaniem
+spakowane archiwum plików zawierających kody źródłowe projektu
+Uwaga! Materiały wgrywa jedna osoba z grupy. Należy jednak pamiętać o tym by podać nazwisko współtwórcy (najlepiej w sprawozdaniu).
+
+Gdzie wgrać materiały?
+Miejsce wgrywania materiałów znajduje się po opisie drugiego etapu. Możecie wgrać do pięciu plików o rozmiarze nie przekraczającym 500 MB (zakładamy, że na tym etapie studiów student potrafi poradzić sobie z za dużymi plikami). Jest to jedyny sposób oddawania tych materiałów. Proszę nie wysyłać ich mailem, ani też umieszczać w serwisach zewnętrznych. W przypadku przekroczenia terminu oddawania i niemożności wgrania materiałów z tego powodu, należy się skontaktować z prowadzącym zajęcia i poprosić o wydłużenie terminu.
+
+Termin oddawania
+Wskazanym terminem oddawania są ostatnie zajęcia dla danej grupy. Koniec semestru jest nieprzekraczalnym terminem, po którym brak oddanego zadania jest równoważny z niezaliczeniem laboratorium w pierwszym terminie.
+Pierwszy etap:
+
+Cel:
+
+Celem zadania jest przygotowanie aplikacji typu lista-szczegóły z zastosowaniem fragmentów. Aplikacja ma być książką kucharską zawierającą przepisy na różne potrawy z możliwością wielokrotnego uruchomienia minutnika.
+
+Wymagania minimalne:
+
+Aplikacja ma składać się z dwóch aktywności: głównej wyświetlającej listę potraw oraz aktywności szczegółów uruchamianej po kliknięciu wybranej potrawy z listy i wyświetlającej listę składników oraz sposób przygotowania potrawy.
+Aplikacja ma korzystać z fragmentów
+We fragmencie szczegółów należy zagnieździć fragment dynamiczny minutnika, pozwalającego odliczać czas pozostały do końca danego etapu przygotowywania potrawy (np. 14 minut na ugotowanie ryżu)
+Minutnik ma działać z dokładnością do sekundy
+Minutnik ustawiany ręcznie
+Dane pobierane z tablicy zdefiniowanej w pliku przechowywanym lokalnie na urządzeniu
+Aplikacja powinna mieć wersję układu dla smartfonów i osobną dla tabletów
+Aplikacja powinna działać poprawnie po zmianie orientacji urządzenia
+Kod aplikacji w Javie
+Przykładowe wymagania dodatkowe:
+
+Wybór innego źródła danych o potrawach np. baza danych lub usługa internetowa
+Kod w Kotlinie zamiast w Javie
+Minutnik pobierający dane z przepisu
+Możliwość odpalenia kilku minutników (np. jednoczesne gotowanie ryżu i jajek na twardo w dwóch różnych garnkach)
+Możliwość dodania uwag do przepisu
+Możliwość subiektywnej oceny przepisu przez użytkownika aplikacji (np. skali określającej prawdopodobieństwo ponownego skorzystania z przepisu)
+
+Drugi etap:
+
+Cel:
+
+Kontynuacja aplikacji z pierwszego etapu i zmiana jej strony wizualnej oraz niektórych mechanizmów nawigacyjnych. Ekran listy ma się składać z co najmniej trzech kart (zakładek). Pierwsza karta ma być kartą główną aplikacji, a pozostałe mają być kartami kategorii. Karta główna będzie informować o  przeznaczeniu aplikacji, a karty kategorii mogą dzielić potrawy wg wybranego kryterium (np. mięsne i wegetariańskie, obiadowe i desery, kuchnia polska i europejska itp. Podział może być dowolny, ale ma być sensowny. Uwaga: Wprowadzane w tym ćwiczeniu zmiany mogą dotyczyć jedynie aplikacji na smartfon, aplikacja na tablet może pozostać bez zmian.
+
+Wymagania minimalne
+
+Karty kategorii zamiast listy nazw tras mają używać widoku RecyclerView z układem siatki (grid), w którym poszczególne pozycje (potrawy) będą prezentowane w postaci obrazka i nazwy, dla których użyto widoku CardView. Kliknięcie wybranej pozycji (potrawy) powoduje wyświetlenie szczegółów, czyli nazwę potrawy, składników, większego obrazka, sposobu przygotowania, jakiegoś dodatkowego opisu.
+Na ekranie szczegółów ma się pojawić przycisk FAB (floating action button), który będzie odpowiedzialny za wysłanie składników na potrawę poza aplikację np. do notatnika, wiadomości itp. Uwaga! Uruchomienie tej aplikacji nie jest wymagane, aczkolwiek wskazane.
+W aplikacji należy zastosować motywy.
+W aplikacji należy korzystać z fragmentów.
+Aplikacja ma działać poprawnie przy zmianie orientacji urządzenia.
+Każda aktywność ma mieć pasek aplikacji w postaci paska narzędzi.
+Ekran szczegółów ma być przewijany w pionie razem z paskiem aplikacji.
+Na ekranie szczegółów obrazek ma się pojawić na pasku aplikacji, ale ma się razem z nim zwijać.
+Przechodzenie pomiędzy kartami ma się odbywać także za pomocą gestu przeciągnięcia.
+
+
+ Elementy dodatkowe:
+
+Kod w Kotlinie,
+Dane umieszczone poza urządzeniem,
+Wykorzystanie motywów z biblioteki wzornictwa (material design)
+Dodanie do paska aplikacji akcji.
+Dodanie do paska aplikacji opcji wyszukiwania przepisu
+Opracowanie własnych ikon związanych z akcją.
+Dodanie szuflady nawigacyjnej.
+Dodanie funkcji sumowania składników z kilku potraw
+Dodanie funkcji przeliczania proporcji składników w zależności od liczby porcji
+Inne według uznania po uzgodnieniu z prowadzącym zajęcia.
